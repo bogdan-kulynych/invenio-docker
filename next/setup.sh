@@ -98,7 +98,7 @@ cdvirtualenv
 
 inveniomanage config create secret-key
 inveniomanage config set CFG_EMAIL_BACKEND flask.ext.email.backends.console.Mail
-inveniomanage config set CFG_BIBSCHED_PROCESS_USER root
+inveniomanage config set CFG_BIBSCHED_PROCESS_USER ${USER}
 inveniomanage config set CFG_DATABASE_NAME invenio
 inveniomanage config set CFG_DATABASE_USER invenio
 inveniomanage config set CFG_SITE_URL http://0.0.0.0:${PORT}
@@ -125,8 +125,6 @@ inveniomanage config set COLLECT_STORAGE invenio.ext.collect.storage.link
 cdvirtualenv
 
 inveniomanage collect
-
-supervisord &
 
 inveniomanage database init --yes-i-know --user=root
 inveniomanage database create
