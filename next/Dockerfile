@@ -2,7 +2,7 @@
 #
 # VERSION 0.0.2
 
-FROM ubuntu:14.04
+FROM phusion/baseimage:0.9.10
 MAINTAINER Yoan Blanc <yoan.blanc@cern.ch>
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -70,4 +70,5 @@ EXPOSE 4000
 
 VOLUME /var/lib/mysql
 VOLUME /home/$USER/.virtualenvs
-CMD ["/usr/bin/supervisord"]
+RUN echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+CMD supervisord

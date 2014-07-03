@@ -26,9 +26,8 @@ it to your usage beforehand.
 
 Once everything is installed, you may run invenio.
 
-    $ workon pu
-    (pu) $ cdvirtualenv src/invenio
-    (pu) $ inveniomanage runserver
+    $ workon next
+    (next) $ inveniomanage runserver
 
 To quit, I would recommend you to stop the processes from supervisord instead
 of relying on docker. MySQL can be a bit slow to stop.

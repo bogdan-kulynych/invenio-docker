@@ -23,4 +23,4 @@ mysqladmin -u root password ''
 mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY '${MYSQL_PASS}'"
 mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION"
 
-mysqladmin -u root shutdown
+service mysql stop
